@@ -1,5 +1,7 @@
 ﻿/*Had heaps of trouble with "fixed" position on the mobile.
-    problem described here: https://love2dev.com/blog/absolutely-fixing-the-mobile-fixed-positioned-toolbar/
+    26/6/21 Nev fixed header is very temperamental on Android mobile
+    it was broken by this 47 character email: Sidharth.KannegalNarayanan@education.nsw.gov.au
+    if broken - delete HTML sections to find the problem
 */
 body {
     margin: 0;
