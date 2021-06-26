@@ -1,9 +1,9 @@
 ﻿/*Had heaps of trouble with "fixed" position on the mobile.
     problem described here: https://love2dev.com/blog/absolutely-fixing-the-mobile-fixed-positioned-toolbar/
 */
-.body {
+body {
     margin: 0;
-    font-family: Calibri, sans-serif;
+/*    font-family: Calibri, sans-serif;*/
 }
 
 .top-container {
@@ -18,7 +18,7 @@
     width: 100%;
     padding: 10px 10px;
     background: #FDBD35;
-    color: #f1f1f1;
+/*    color: #f1f1f1;*/
 }
 
 .content {
@@ -49,20 +49,20 @@
     color: white;
     background-color: rgb(65,70,152);
     font-weight: bold;
-    font-family: Calibri;
+/*    font-family: Calibri;*/
 }
 
 .body-calibri {
-    font-family: Calibri;
+/*    font-family: Calibri;*/
 }
 
 .body-purple {
-    font-family: Calibri;
+/*    font-family: Calibri;*/
     color: #7030A0;
 }
 
 .body-acknowledgement {
-    font-family: Calibri;
+/*    font-family: Calibri;*/
     font-style: italic;
     font-size: 9.0pt;
     color: #595959;
