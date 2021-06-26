@@ -14,10 +14,18 @@
 }
 
 .header {
+    position: fixed;
     text-align: center;
+    width: 100%;
+    padding: 10px 10px;
+    background: #FDBD35;
+    color: #f1f1f1;
+
+
+/*    text-align: center;
     font-size: 18pt;
     padding: 20px 20px;
-    background: #FDBD35;
+    background: #FDBD35;*/
     /*    color: #f1f1f1;*/
 }
 
