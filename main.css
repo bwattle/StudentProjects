@@ -70,4 +70,10 @@ body {
     font-size: 9.0pt;
     color: #595959;
 }
+.body-smallFont {
+    /*    font-family: Calibri;*/
+/*    font-style: italic;*/
+    font-size: 6.0pt;
+    color: #595959;
+}
 
