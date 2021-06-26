@@ -84,7 +84,7 @@ body {
 
 /*old below*/
 
-/*.h1-18ptBold {
+.h1-18ptBold {
     text-align: center;
     font-size: 18pt;
     font-family: Calibri, sans-serif;
@@ -115,5 +115,5 @@ body {
     font-style: italic;
     font-size: 9.0pt;
     color: #595959;
-}*/
+}
 
