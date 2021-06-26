@@ -1,4 +1,40 @@
-﻿
+﻿body {
+    margin: 0;
+    font-family: Calibri, sans-serif;
+}
+
+.top-container {
+/*    background-color: #f1f1f1;*/
+    padding: 30px;
+    text-align: center;
+    font-size: 18pt;
+    font-family: Calibri, sans-serif;
+    margin: 0cm;
+    font-weight: bold;
+}
+
+.header {
+    text-align: center;
+    padding: 1px 1px;
+    background: #FDBD35;
+    /*    color: #f1f1f1;*/
+}
+
+.content {
+    padding: 16px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+    .sticky + .content {
+        padding-top: 102px;
+    }
+
+/*old below*/
 
 .h1-18ptBold {
     text-align: center;
