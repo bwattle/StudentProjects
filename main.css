@@ -71,9 +71,9 @@ body {
     color: #595959;
 }
 .body-smallFont {
-    /*    font-family: Calibri;*/
+        font-family: 'Arial Narrow';
 /*    font-style: italic;*/
-    font-size: 6.0pt;
-    color: #595959;
+    font-size: 7.0pt;
+/*    color: #595959;*/
 }
 
