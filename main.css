@@ -1,5 +1,5 @@
 ﻿/*Had heaps of trouble with "fixed" position on the mobile.
-    resorted to "absolute" as described in: https://love2dev.com/blog/absolutely-fixing-the-mobile-fixed-positioned-toolbar/
+    problem described here: https://love2dev.com/blog/absolutely-fixing-the-mobile-fixed-positioned-toolbar/
 */
 .body {
     margin: 0;
@@ -13,9 +13,7 @@
 }
 
 .header {
-    position: absolute;
-    top: 10px;
-    left: 30px;
+    position: fixed;
     text-align: center;
     width: 100%;
     padding: 10px 10px;
