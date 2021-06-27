@@ -16,6 +16,7 @@ table {
 th, td {
     text-align: left;
     padding: 16px;
+    font-size: 16pt;
 }
 .top-container {
     background-color: #f1f1f1;
