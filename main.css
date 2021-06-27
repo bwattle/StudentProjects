@@ -7,7 +7,16 @@ body {
     margin: 0;
 /*    font-family: Calibri, sans-serif;*/
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+}
 
+th, td {
+    text-align: left;
+    padding: 16px;
+}
 .top-container {
     background-color: #f1f1f1;
     padding: 30px;
@@ -76,4 +85,5 @@ body {
     font-size: 7.0pt;
 /*    color: #595959;*/
 }
+
 
