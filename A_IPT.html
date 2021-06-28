@@ -1,805 +1,201 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-
+<!--fixed header code copied from: https://www.w3schools.com/howto/howto_js_sticky_header.asp
+    but JavaScript seemed problematic, so was abandoned -->
+<!-- 26/6/21 Nev "fixed" header is very temperamental on Android mobile - Chrome v91.0.4472.101
+    it was broken by this 40 character email with the normal font:
+    Xxxxx.Xxxxxxxxxxxxx@education.nsw.gov.au
+    Also broken by long web links - avoided with a short "display text" or small font.
+    If fixed header is broken - delete sections 1 by 1 to find the problem -->
+<html>
 <head>
-    <title>Blackwattle SDD Addresses</title>
+    <meta charset="utf-8">
+    <title>Blackwattle IT</title>
     <link rel="icon" href="images/SSC_SmallLogo.png">
-<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:Calibri;
-	panose-1:2 15 5 2 2 2 4 3 2 4;}
-@font-face
-	{font-family:Verdana;
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:Tahoma;
-	panose-1:2 11 6 4 3 5 4 4 2 4;}
-@font-face
-	{font-family:"Noto Sans Symbols";}
-@font-face
-	{font-family:Times;
-	panose-1:2 2 6 3 5 4 5 2 3 4;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:8.0pt;
-	margin-left:0cm;
-	line-height:107%;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-a:link, span.MsoHyperlink
-	{color:blue;
-	text-decoration:underline;}
-p
-	{margin-right:0cm;
-	margin-left:0cm;
-	font-size:12.0pt;
-	font-family:"Times New Roman",serif;}
-p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
-	{margin:0cm;
-	font-size:11.0pt;
-	font-family:"Calibri",sans-serif;}
-p.tabletext, li.tabletext, div.tabletext
-	{mso-style-name:"table text";
-	margin:0cm;
-	font-size:11.0pt;
-	font-family:"Times New Roman",serif;}
-.MsoChpDefault
-	{font-family:"Calibri",sans-serif;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:107%;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 42.55pt 2.0cm 42.55pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
-
+    <link rel="stylesheet" href="main.css">
+    <style type="text/css">
+        .auto-style1 {
+            color: #FF0000;
+        }
+    </style>
 </head>
-
-<body lang=EN-AU link=blue vlink="#954F72" style='word-wrap:break-word'>
-
-<div class=WordSection1>
-
-<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=680
- style='width:510.2pt;border-collapse:collapse;border:none'>
- <tr style='height:73.75pt'>
-  <td width=255 valign=top style='width:191.35pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
-  height:73.75pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'><span
-  style='position:absolute;z-index:-1895824896;margin-left:-1px;margin-top:
-  0px;width:210px;height:107px'><img width=210 height=107
-  src="images/logo-Bwattle.jpg"></span>† </p>
-  </td>
-  <td width=425 valign=top style='width:318.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
-  height:73.75pt'>
-  <p class=MsoNoSpacing align=center style='text-align:center'><strong><span
-  style='font-size:14.0pt;font-family:"Calibri",sans-serif'>TAS FACULTY</span></strong></p>
-  <p class=MsoNoSpacing align=center style='text-align:center'><strong><span
-  style='font-size:14.0pt;font-family:"Calibri",sans-serif'>ASSESSMENT TASK
-  NOTIFICATION</span></strong></p>
-  <p class=MsoNoSpacing align=center style='text-align:center'><strong><span
-  style='font-size:14.0pt;font-family:"Calibri",sans-serif;color:red'>Software
-  Design &amp; Development</span></strong><br>
-  <strong><span style='font-family:"Calibri",sans-serif;color:red'>HEAD
-  TEACHER:† Ms McBride</span></strong></p>
-      <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
-      <p class=MsoNoSpacing align=center style='text-align:center'>&nbsp;</p>
-  </td>
- </tr>
- <tr style='height:17.4pt'>
-  <td width=680 colspan=2 valign=top style='width:510.2pt;border:solid windowtext 1.0pt;
-  background:black;padding:0cm 5.4pt 0cm 5.4pt;height:17.4pt'>
-  <p style='margin:0cm'><span lang=EN-US style='font-family:"Calibri",sans-serif;
-  color:white'>12 </span><span style='font-family:"Calibri",sans-serif;
-  color:white'>IPT</span><span lang=EN-US style='font-family:"Calibri",sans-serif;
-  color:white'> 2020 Final </span><span style='font-family:"Calibri",sans-serif;
-  color:white'>Portfolio </span><span lang=EN-US style='font-family:"Calibri",sans-serif;
-  color:white'>projects</span><b><span style='font-family:
-  "Calibri",sans-serif;color:white'>:</span></b></p>
-  </td>
- </tr>
- <tr style='height:17.4pt'>
-  <td width=680 colspan=2 valign=top style='width:510.2pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:17.4pt'>
-  <p class=MsoNormal style='margin-bottom:0cm;line-height:normal'><span
-  style='font-size:12.0pt'>&nbsp;</span></p>
-      <p style='margin:0cm'>&nbsp;</p>
-      <div style="direction:ltr">
-          <table border="1" cellpadding="0" cellspacing="0" style="direction:ltr;
- border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:
- 1pt" summary="" title="" valign="top">
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.7354in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Name:</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:3.1743in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          GitHub Site address:</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:3.0916in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Web address:</p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.7354in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Tate</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:3.193in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://github.com/tomatotownn/tomatotownn.github.io">https://github.com/tomatotownn/tomatotownn.github.io</a></p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:3.0729in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://tomatotownn.github.io/">https://tomatotownn.github.io/</a></p>
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">&nbsp;
-                          </p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.7354in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Taiga</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:3.1743in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://github.com/ttaiga/IPT-MTaiga">https://github.com/ttaiga/IPT-MTaiga</a></p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:3.0916in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://ttaiga.github.io/IPT-MTaiga/"><span style="color:#0366D6">https://ttaiga.github.io/IPT-MTaiga/</span></a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.7354in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Josh</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:3.1743in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://github.com/inkurad27/joshh"><span lang="en-AU">https://github.com/inkurad27/joshh</span></a></p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:3.0916in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://inkurad27.github.io/joshh/"><span lang="en-AU">https://inkurad27.github.io/joshh/</span></a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.7354in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Qusai</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:3.193in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://github.com/QusaiArsiwalla/Qusai.A_IPT"><span lang="en-GB">https://github.com/QusaiArsiwalla/Qusai.A_IPT</span></a></p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:3.1875in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://qusaiarsiwalla.github.io/Qusai.A_IPT/"><span lang="en-GB" style="color:#0366D6">https://qusaiarsiwalla.github.io/Qusai.A_IPT/</span></a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.7548in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          William</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:3.1743in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://github.com/William-Sheppard/IPT-Assignment">https://github.com/William-Sheppard/IPT-Assignment</a></p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:3.1277in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://william-sheppard.github.io/Will-IPT-Assignment/"><span lang="en-GB" style="color:#0366D6">https://william-sheppard.github.io/Will-IPT-Assignment/</span></a><span lang="en-GB" style="color:#0366D6">.</span></p>
-                  </td>
-              </tr>
-          </table>
-      </div>
-      <p style="margin:0cm">&nbsp;</p>
-      <p style="margin:0cm"><a href="index.html">Home</a></p>
-      <p style="margin:0cm">
+<body>
+    <div class="h2-BlueBG" id="2021Y11A2"></div>
+    <div class="header" id="myHeader">
+        <a href="#2021Y11A2">11A2-21 </a>- <a href="#2021Y11A1">11A1-21</a> - 
+            <a href="#2019Y12A3">12Final-19 </a>- <a href="#2019Y11A1">11A1-19 </a>- 
+            <a href="index.html">Home</a>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <p class="h1-18ptBold">
+        <img src="images/logo-Bwattle700x350.png" width="400" height="200" alt="Logo for Blackwattle Campus of Sydney Secondary College" title="SSC Logo"><br />
+    </p>
+    <p class="h1-18ptBold">
+        TAS FACULTY
+                        <br />
         <br />
-        <a href="A_IPT2.html">Test page</a>
+        <span class="auto-style1">Information Processes &amp; Technology</span>
+    </p>
+    <p class="h1-18ptBold">
+        <span style='color: red'>Links to student work<br />
+            HEAD TEACHER: Ms McBride      </span>
+    </p>
+    <br />
+    <br />
+    <a href="index.html">Home</a>
+    <br />
+    <br />
+    <div class="h2-BlueBG">
+        Year 11 Assessment 2 - 2021 - Group Pok√©mon Island
+    </div>
+    <div class="content">
+        <br />
+        <a href="index.html">Home</a>
+        <br />
+        <br />
+        <div class="body-purple">
+            <p>The Pok√©mon  Island Resorts have accounts, bookings and promotion material:</p>
+        </div>
+        <div>
+            <table>
+                <tr>
+                    <td style="background-color: #FFC000;">Meowth Land
+                            <br />
+                        <a href="https://sites.google.com/education.nsw.gov.au/meowthland/home">https://sites.google.com/education.nsw.gov.au/meowthland/home</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #92D050;">Illchay Island Adventures
+                            <br />
+                        <a href="https://novastrion.wixsite.com/illchay-island">https://novastrion.wixsite.com/illchay-island </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #DDEBF7;">dnalsI Island
+                            <br />
+                        <a href="https://sites.google.com/education.nsw.gov.au/dnalsi-island/home">https://sites.google.com/education.nsw.gov.au/dnalsi-island/home</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: yellow;">Magikarps Den
+                            <br />
+                        <a href="https://sites.google.com/education.nsw.gov.au/magikarpsden">https://sites.google.com/education.nsw.gov.au/magikarpsden</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <div class="h1-18ptBold" id="2021Y11A1"></div>
+        <br />
+        <a href="index.html">Home</a>
+        <br />
+        <br />
+        <div class="h2-BlueBG">
+            Year 11 Assessment 1 - 2021 - Case Studies
+        </div>
+        <div class="body-purple">
+            <p>Students looked at the information processes within an organisation: </p>
+        </div>
+        <p>
+            Marcus: <a href="https://sites.google.com/education.nsw.gov.au/case-study-ipt/home?authuser=2">Ubisoft</a><br />
+            Tom: <a href="https://novastrion.wixsite.com/nasa-case-study">NASA</a><br />
+            Atticus: <a href="https://sites.google.com/education.nsw.gov.au/case-study-samsung/home">Samsung</a><br />
+            Luca: <a href="https://sites.google.com/view/ipt-assessment-task-1-msi/home">MSI</a><br />
+            David: <a href="https://sites.google.com/education.nsw.gov.au/iptassignmentpow">Protect Our Winters</a><br />
+            Jordan: <a href="https://sites.google.com/education.nsw.gov.au/case-study-apple">Apple Devices</a><br />
+            Nathan: <a href="https://sites.google.com/education.nsw.gov.au/asuscasestudy">ASUS</a><br />
+            Aaron: <a href="https://sites.google.com/education.nsw.gov.au/aaroncasestudynab/home">NAB</a><br />
+            Kyan: <a href="https://sites.google.com/education.nsw.gov.au/kyancasestudyipt/home">Microsoft</a><br />
+            Oliver: <a href="https://oliver7498.wixsite.com/website">Google Docs</a><br />
+            Martin: <a href="https://sites.google.com/education.nsw.gov.au/dodge-case-study">Dodge</a><br />
         </p>
-<p class=tabletext style='margin-left:1.0cm;text-indent:-1.0cm'><strong><span
-  lang=EN-US style='font-size:12.0pt;font-family:"Calibri",sans-serif;
-  font-weight:normal'>&nbsp;</span></strong></p>
-  </td>
- </tr>
-    <tr>
-  <td width=680 colspan=2 valign=top style='width:510.2pt;border:solid windowtext 1.0pt;
-  border-top:none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:17.4pt'>
-  <p style='margin:0cm'><span lang=EN-US style='font-family:"Calibri",sans-serif;
-  color:white'>1</span><span style='font-family:"Calibri",sans-serif;
-  color:white'>1 IPT</span><span lang=EN-US style='font-family:"Calibri",sans-serif;
-  color:white'> 20</span><span style='font-family:"Calibri",sans-serif;
-  color:white'>21</span><span lang=EN-US style='font-family:"Calibri",sans-serif;
-  color:white'> Pok</span><span style='font-family:"Calibri",sans-serif;
-  color:white'>e</span><span lang=EN-US style='font-family:"Calibri",sans-serif;
-  color:white'>mon Island Resort</span><span style='font-family:"Calibri",sans-serif;
-  color:white'>s</span><b><span style='font-family:
-  "Calibri",sans-serif;color:white'>:</span></b></p>
-  </td>
-    </tr>
-    <tr>
-  <td width=680 colspan=2 valign=top style='width:510.2pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p style='margin:0cm'><span style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
-      <div style="direction:ltr">
-          <table border="1" cellpadding="0" cellspacing="0" style="direction:ltr;
- border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:
- 1pt" summary="" title="" valign="top">
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6868in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Arial;font-size:10.0pt;text-align:center">
-                          <span style="font-weight:bold">Colour</span></p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:1.9201in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Arial;font-size:10.0pt;text-align:center">
-                          <span style="font-weight:bold">Island Name</span></p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:4.4416in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Arial;font-size:10.0pt;text-align:center">
-                          <span style="font-weight:bold">Site address</span></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  background-color:#FFC000;vertical-align:top;width:.6868in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Arial;font-size:10.0pt">
-                          Orange</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  background-color:#FFC000;vertical-align:top;width:1.9201in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Meowth Land</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  background-color:#FFC000;vertical-align:top;width:4.5208in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in">
-                          <a href="https://sites.google.com/education.nsw.gov.au/meowthland/home"><span style="font-family:&quot;Times New Roman&quot;;font-size:12.0pt">https://sites.google.com/education.nsw.gov.au/meowthland/home</span></a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  background-color:#92D050;vertical-align:top;width:.6673in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Arial;font-size:10.0pt">
-                          Green</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  background-color:#92D050;vertical-align:top;width:1.9395in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Illchay Island Adventures</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  background-color:#92D050;vertical-align:top;width:4.3944in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in">
-                          <a href="https://novastrion.wixsite.com/illchay-island"><span style="font-family:&quot;Times New Roman&quot;;font-size:12.0pt">https://novastrion.wixsite.com/illchay-island </span></a>
-                      </p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  background-color:#DDEBF7;vertical-align:top;width:.6673in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Arial;font-size:10.0pt">
-                          Blue</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  background-color:#DDEBF7;vertical-align:top;width:1.9201in;padding:4pt 4pt 4pt 4pt">
-                      <p lang="en-US" style="margin:0in;font-family:Consolas;font-size:12.0pt">
-                          dnalsI Island</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  background-color:#DDEBF7;vertical-align:top;width:4.5458in;padding:4pt 4pt 4pt 4pt">
-                      <p lang="en-US" style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/dnalsi-island/home">https://sites.google.com/education.nsw.gov.au/dnalsi-island/home</a>
-                      </p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  background-color:yellow;vertical-align:top;width:.6673in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Arial;font-size:10.0pt">
-                          Yellow</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  background-color:yellow;vertical-align:top;width:1.9201in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Magikarps Den</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  background-color:yellow;vertical-align:top;width:4.4416in;padding:4pt 4pt 4pt 4pt">
-                      <p lang="en-US" style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/magikarpsden">https://sites.google.com/education.nsw.gov.au/magikarpsden</a></p>
-                  </td>
-              </tr>
-          </table>
-      </div>
-      <p style='margin:0cm'>&nbsp;</p>
-      <p style="margin:0cm"><a href="index.html">Home</a></p>
-      <p style="margin:0cm">&nbsp;</p>
-      <p class=MsoNoSpacing style='line-height:115%'></p>
-  </td>
-    </tr>
-    <tr>
-  <td width=680 colspan=2 valign=top style='width:510.2pt;border:solid windowtext 1.0pt;
-  border-top:none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:17.4pt'>
-  <p style='margin:0cm'><span lang=EN-US style='font-family:"Calibri",sans-serif;
-  color:white'>1</span><span style='font-family:"Calibri",sans-serif;
-  color:white'>1 IPT</span><span lang=EN-US style='font-family:"Calibri",sans-serif;
-  color:white'> 20</span><span style='font-family:"Calibri",sans-serif;
-  color:white'>21</span><span lang=EN-US style='font-family:"Calibri",sans-serif;
-  color:white'> </span><span style='font-family:"Calibri",sans-serif;
-  color:white'>Case Study sites</span><b><span style='font-family:
-  "Calibri",sans-serif;color:white'>:</span></b></p>
-  </td>
-    </tr>
-    <tr>
-  <td width=680 colspan=2 valign=top style='width:510.2pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p style='margin:0cm'><span style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
-      <div style="direction:ltr">
-          <table border="1" cellpadding="0" cellspacing="0" style="direction:ltr;
- border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:
- 1pt" summary="" title="" valign="top">
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6909in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          <span style="font-weight:bold">Name</span></p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:1.4486in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          <span style="font-weight:bold">Organisation</span></p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:4.8902in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt;color:red;
-  text-align:center">
-                          <span style="font-weight:bold">Web Address</span></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.7097in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Marcus</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:1.4486in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Ubisoft</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:4.9187in;padding:4pt 4pt 4pt 4pt">
-                      <p lang="en-US" style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/case-study-ipt/home?authuser=2">https://sites.google.com/education.nsw.gov.au/case-study-ipt/home?authuser=2</a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6909in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Tom</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:1.4486in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          NASA</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:4.8618in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          <a href="https://novastrion.wixsite.com/nasa-case-study">https://novastrion.wixsite.com/nasa-case-study</a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.7083in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Atticus</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:1.4486in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Samsung</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:4.8902in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/case-study-samsung/home">https://sites.google.com/education.nsw.gov.au/case-study-samsung/home</a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6909in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Luca</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:1.4486in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          MSI</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:4.8902in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          <a href="https://sites.google.com/view/ipt-assessment-task-1-msi/home">https://sites.google.com/view/ipt-assessment-task-1-msi/home </a>
-                      </p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6909in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          David</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:1.4486in;padding:4pt 4pt 4pt 4pt">
-                      <p lang="en-US" style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Protect Our Winters</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:4.8902in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt;color:#80868B">
-                          <a href="https://sites.google.com/education.nsw.gov.au/iptassignmentpow">https://sites.google.com/education.nsw.gov.au/<span style="font-weight:bold">iptassignmentpow</span></a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.693in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Jordan</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:1.4486in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Apple Devices</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:4.8902in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt;color:#80868B">
-                          <a href="https://sites.google.com/education.nsw.gov.au/case-study-apple">https://sites.google.com/education.nsw.gov.au/<span style="font-weight:bold">case-study-apple</span></a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.7097in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Nathan</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:1.4486in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          ASUS</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:4.8423in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/asuscasestudy">https://sites.google.com/education.nsw.gov.au/asuscasestudy </a>
-                      </p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6909in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Aaron</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:1.4486in;padding:4pt 4pt 4pt 4pt">
-                      <p lang="en-US" style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          NAB</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:4.9895in;padding:4pt 4pt 4pt 4pt">
-                      <p lang="en-US" style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/aaroncasestudynab/home">https://sites.google.com/education.nsw.gov.au/aaroncasestudynab/home</a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6909in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Kyan</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:1.4486in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Microsoft</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:4.975in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/kyancasestudyipt/home"><span lang="en-GB">https://sites.google.com/education.nsw.gov.au/kyancasestudyipt/home</span></a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6909in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Oliver</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:1.4486in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Google Docs</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:4.8618in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          <a href="https://oliver7498.wixsite.com/website">https://oliver7498.wixsite.com/website</a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.7013in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Martin</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:1.4486in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          Dodge</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:4.8902in;padding:4pt 4pt 4pt 4pt">
-                      <p lang="en-US" style="margin:0in;font-family:Calibri;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/dodge-case-study">https://sites.google.com/education.nsw.gov.au/dodge-case-study</a></p>
-                  </td>
-              </tr>
-          </table>
-      </div>
-      <p style='margin:0cm'>&nbsp;</p>
-      <p style="margin:0cm"><a href="index.html">Home</a></p>
-      <p style="margin:0cm">&nbsp;</p>
-      <p class=MsoNoSpacing style='line-height:115%'></p>
-  </td>
-    </tr>
- <tr style='height:17.4pt'>
-  <td width=680 colspan=2 valign=top style='width:510.2pt;border:solid windowtext 1.0pt;
-  border-top:none;background:black;padding:0cm 5.4pt 0cm 5.4pt;height:17.4pt'>
-  <p style='margin:0cm'><span lang=EN-US style='font-family:"Calibri",sans-serif;
-  color:white'>1</span><span style='font-family:"Calibri",sans-serif;
-  color:white'>1 IPT</span><span lang=EN-US style='font-family:"Calibri",sans-serif;
-  color:white'> 2019 </span><span style='font-family:"Calibri",sans-serif;
-  color:white'>Case Study sites</span><b><span style='font-family:
-  "Calibri",sans-serif;color:white'>:</span></b></p>
-  </td>
- </tr>
- <tr>
-  <td width=680 colspan=2 valign=top style='width:510.2pt;border:solid windowtext 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p style='margin:0cm'><span style='font-family:"Calibri",sans-serif'>&nbsp;</span></p>
-      <p style='margin:0cm'>&nbsp;</p>
-      <div style="direction:ltr">
-          <table border="1" cellpadding="0" cellspacing="0" style="direction:ltr;
- border-collapse:collapse;border-style:solid;border-color:#A3A3A3;border-width:
- 1pt" summary="" title="" valign="top">
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6868in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt;
-  text-align:center">
-                          <span style="font-weight:bold">Name</span></p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:6.3145in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt;
-  color:red;text-align:center">
-                          <span style="font-weight:bold">Web Address</span></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6673in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Ben</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:6.334in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/ebay-ben/home?authuser=1"><span lang="en-AU">https://sites.google.com/education.nsw.gov.au/ebay-ben/home?authuser=1</span></a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6673in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Irvana</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:6.334in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/ipt-assessment-task-irvana-/home-cb-info-techprocesses?pli=1">https://sites.google.com/education.nsw.gov.au/ipt-assessment-task-irvana-/home-cb-info-techprocesses?pli=1</a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6868in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Ishwor</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:6.3145in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="http://ishworkoirala.weebly.com"><span style="font-weight:bold;
-  color:#0066CC">http://ishworkoirala.weebly.com </span></a>
-                      </p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6673in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          James</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:6.334in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="http://users.tpg.com.au/nevgoodyer/IPT/Edmodo-19">http://users.tpg.com.au/nevgoodyer/IPT/Edmodo-19</a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6673in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Josh</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:6.334in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/ipt-case-study-josh/home?authuser=1">https://sites.google.com/education.nsw.gov.au/ipt-case-study-josh/home?authuser=1</a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6868in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Max L</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:6.3145in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://maximuslorents.wixsite.com/casestudy-maximus">https://maximuslorents.wixsite.com/casestudy-maximus</a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6673in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Qusai</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:6.334in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/ipt-casestudyqusai/home?authuser=1">https://sites.google.com/education.nsw.gov.au/ipt-casestudyqusai/home?authuser=1</a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6673in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Sam</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:6.334in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/spacex-website-assignment/home">https://sites.google.com/education.nsw.gov.au/spacex-website-assignment/home</a>
-                      </p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6673in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Taiga</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:6.334in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/taiga-matsui-ipt/home"><span lang="en-US">https://sites.google.com/education.nsw.gov.au/taiga-matsui-ipt/home </span></a>
-                      </p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6694in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Tate F</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:6.3319in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://lmaodab.weebly.com/"><span lang="en-US">https://lmaodab.weebly.com/</span></a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6673in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Vuk</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:6.334in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://sites.google.com/s/1ui4VdBIq-6bsBjXeNht8qdZQZ5_MOXzS/p/1XZVtu_46Nom8pYmcD9edVJ8KuVfoBVJr/edit">https://sites.google.com/s/1ui4VdBIq-6bsBjXeNht8qdZQZ5_MOXzS/p/1XZVtu_46Nom8pYmcD9edVJ8KuVfoBVJr/edit</a></p>
-                  </td>
-              </tr>
-              <tr>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:.6673in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          Will</p>
-                  </td>
-                  <td style="border-style:solid;border-color:#A3A3A3;border-width:1pt;
-  vertical-align:top;width:6.334in;padding:4pt 4pt 4pt 4pt">
-                      <p style="margin:0in;font-family:&quot;Times New Roman&quot;;font-size:12.0pt">
-                          <a href="https://sites.google.com/education.nsw.gov.au/casestudy-william/">https://sites.google.com/education.nsw.gov.au/casestudy-william/</a></p>
-                  </td>
-              </tr>
-          </table>
-      </div>
-      <p style="margin:0cm">&nbsp;&nbsp;</p>
-      <p style="margin:0cm"><a href="index.html">Home</a></p>
-      <p style="margin:0cm">&nbsp;</p>
-<p class=MsoNoSpacing style='line-height:115%'></p>
-  </td>
- </tr>
-</table>
+        <div class="h1-18ptBold" id="2019Y12A3"></div>
+        <br />
+        <a href="index.html">Home</a>
+        <br />
+        <br />
+        <div class="h2-BlueBG">
+            Year 12 Final Portfolio Website - 2019&nbsp;
+        </div>
+        <div class="body-purple">
+            <p>Y12 IPT 2019 Portfolio Websites - displaying work done during year 11 &amp; 12:</p>
+        </div>
+        Tate:<br />
+        GitHub: <a href="https://tomatotownn.github.io/">Website</a><br />
+        GitHub: <a href="https://github.com/tomatotownn/tomatotownn.github.io">Repository</a><br />
+        <br />
+        Taiga:<br />
+        GitHub: <a href="https://ttaiga.github.io/IPT-MTaiga/">Website</a><br />
+        GitHub: <a href="https://github.com/ttaiga/IPT-MTaiga">Repository</a><br />
+        <br />
+        Josh:<br />
+        GitHub: <a href="https://inkurad27.github.io/joshh/">Website</a><br />
+        GitHub: <a href="https://github.com/inkurad27/joshh">Repository</a><br />
+        <br />
+        Qusai:<br />
+        GitHub: <a href="https://qusaiarsiwalla.github.io/Qusai.A_IPT/">Website</a><br />
+        GitHub: <a href="https://github.com/QusaiArsiwalla/Qusai.A_IPT">Repository</a><br />
+        <br />
+        William:<br />
+        GitHub: <a href="https://william-sheppard.github.io/Will-IPT-Assignment/">Website</a><br />
+        GitHub: <a href="https://github.com/William-Sheppard/IPT-Assignment">Repository</a><br />
+        <br />
+        <br />
+    </div>
+    <br />
+    <a href="index.html">Home</a>
+    <br />
+    <br />
+    <div class="h2-BlueBG">
+        Year 11 Assessment 1 - 2018 - Case Studies
+    </div>
+    <p style="font-family: Calibri; font-size: 11.0pt; margin: 0in">
+        <br />
 
-<p class=MsoNormal style='margin-bottom:0cm;line-height:normal;vertical-align:
-middle'><a name="_Marking_Rubric"></a><span style='font-size:12.0pt'>&nbsp;</span></p>
-
-<p class=MsoNormal style='margin-bottom:0cm;line-height:normal;vertical-align:
-middle'>&nbsp;</p>
-
-</div>
-
+        Name
+        <br />
+        <br />
+        <a href="https://sites.google.com/education.nsw.gov.au/ebay-ben/home?authuser=1">Ben</a>&nbsp;
+        Ebay<br />
+        <br />
+        <a href="https://sites.google.com/education.nsw.gov.au/ipt-assessment-task-irvana-/home-cb-info-techprocesses?pli=1">Irvana</a>&nbsp;
+        <br />
+        <br />
+        <a href="http://ishworkoirala.weebly.com">Ishwor</a>&nbsp; 
+        <br />
+        <br />
+        <a href="http://users.tpg.com.au/nevgoodyer/IPT/Edmodo-19">James</a>&nbsp;
+        <br />
+        &nbsp;<br />
+        <a href="https://sites.google.com/education.nsw.gov.au/ipt-case-study-josh/home?authuser=1">Josh</a>&nbsp;
+        <br />
+        &nbsp;<br />
+        <a href="https://maximuslorents.wixsite.com/casestudy-maximus">Max L </a>&nbsp;
+        <br />
+        <br />
+        <a href="https://sites.google.com/education.nsw.gov.au/ipt-casestudyqusai/home?authuser=1">Qusai</a>&nbsp;
+        <br />
+        <br />
+        <a href="https://sites.google.com/education.nsw.gov.au/spacex-website-assignment/home">Sam</a>
+        <br />
+        <br />
+        <a href="https://sites.google.com/education.nsw.gov.au/taiga-matsui-ipt/home">Taiga</a>
+        <br />
+        <br />
+        <a href="https://lmaodab.weebly.com/">Tate F</a>
+        <br />
+        <br />
+        <a href="https://sites.google.com/s/1ui4VdBIq-6bsBjXeNht8qdZQZ5_MOXzS/p/1XZVtu_46Nom8pYmcD9edVJ8KuVfoBVJr/edit">Vuk</a>
+        <br />
+        <br />
+        <a href="https://sites.google.com/education.nsw.gov.au/casestudy-william/">Will</a>
+        <br />
+        <br />
+    </p>
+    <div class="h2-BlueBG">
+        End of page
+    </div>
 </body>
-
 </html>

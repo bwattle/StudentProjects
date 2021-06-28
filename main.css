@@ -1,7 +1,10 @@
-﻿/*Had heaps of trouble with "fixed" position on the mobile.
-    26/6/21 Nev fixed header is very temperamental on Android mobile
-    it was broken by this 47 character email: Sidharth.KannegalNarayanan@education.nsw.gov.au
-    if broken - delete HTML sections to find the problem
+﻿/*Fixed header code copied from: https://www.w3schools.com/howto/howto_js_sticky_header.asp
+    but JavaScript seemed problematic, so was abandoned
+    26/6/21 Nev "fixed" header is very temperamental on Android mobile - Chrome v91.0.4472.101
+    it was broken by this 40 character email with the normal font:
+    Xxxxx.Xxxxxxxxxxxxx@education.nsw.gov.au
+    Also broken by long web links - avoided with a short "display text" or small font.
+    If fixed header is broken - delete sections 1 by 1 to find the problem
 */
 body {
     margin: 0;
@@ -19,11 +22,6 @@ th, td {
     font-size: 22pt;
     border: 1px solid #000;
 }
-.top-container {
-    background-color: #f1f1f1;
-    padding: 30px;
-    text-align: center;
-}
 
 .header {
     position: fixed;
@@ -39,15 +37,9 @@ th, td {
     padding: 16px;
 }
 
-/*.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
+.text-red {
+    color: red;
 }
-
-    .sticky + .content {
-        padding-top: 102px;
-    }*/
 
 .h1-18ptBold {
     text-align: center;
