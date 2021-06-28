@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <!--fixed header code copied from: https://www.w3schools.com/howto/howto_js_sticky_header.asp
-    but JavaScript seemed problematic, so was abandoned -->
+    but JavaScript seemed problematic, so was abandoned.
+    If the user zooms, the header fixing is gone! -->
 <!-- 26/6/21 Nev "fixed" header is very temperamental on Android mobile - Chrome v91.0.4472.101
     it was broken by this 40 character email with the normal font:
     Xxxxx.Xxxxxxxxxxxxx@education.nsw.gov.au
@@ -93,14 +94,15 @@
             <li>Point 4</li>
             <li>This &quot;ordered List&quot; ends with &lt;/ol&gt;</li>
         </ol>
-        <br />
-        <div class="body-purple">
+                <div class="body-purple">
             Example of a colour analysis - converting to Binary and Hex with the Blackwattle logo. This is also an example of a complex table with CSS to override the standard table font size and spans for the subscripts:<br />
         </div>
         <div style="direction: ltr">
             <table>
                 <tr>
-                    <td></td>
+                    <td>
+                        <img src="images/logo-Bwattle-210x107.jpg" width="110" height="54" alt="Small Logo as demo"/><br />
+                    </td>
                     <td style="font-size: 10.0pt;">Base 10
                         <br />
                         Base 2
@@ -133,7 +135,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                        <img src="images/logo-Bwattle-210x107.jpg" width="70" height="34" alt="Small Logo as demo"/><br />
+                    </td>
                     <td style="font-size: 10.0pt; color: red;">Red (R)
                     </td>
                     <td style="font-size: 10.0pt; color: green;">Green (G)
@@ -146,7 +150,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="font-size: 12pt; color: purple;">Main1 - blue
+                    <td style="font-size: 12pt; color: #4145C4;">Main1 - blue
                     </td>
                     <td style="font-size: 10pt;">65<span style="vertical-align: sub; font-size: 8pt;">10</span>
                         <br />
@@ -174,7 +178,7 @@
                     <td style="background-color: #4145C4;"></td>
                 </tr>
                 <tr>
-                    <td style="font-size: 12pt; color: purple;">Main2 - orange
+                    <td style="font-size: 12pt; color: #FDBD35;">Main2 - orange
                     </td>
                     <td style="font-size: 10pt;">253<span style="vertical-align: sub; font-size: 8pt;">10</span>
                         <br />
