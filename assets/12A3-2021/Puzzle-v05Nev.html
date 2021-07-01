@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>15-Puzzle</title>
+    <style type="text/css">
+        body {
+            background-color: #366873;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 90px 90px 90px 90px;
+            grid-template-rows: 90px 90px 90px 90px;
+            padding: 15px;
+            background-color: #D92387;
+            width: 360px;
+            height: 360px;
+            /*position: center;*/
+            /*            position: absolute;*/
+            /*            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);*/
+        }
+
+        .grid-item {
+            background-color: #F2EB88;
+            border: 4px solid #D92387;
+            padding: 25px;
+            font-size: 30px;
+            color: black;
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+        .play {
+            width: 70px;
+            height: 50px;
+            background-color: #D0F252;
+            font-size: 24px;
+            font-weight: bold;
+            color: #BF3434;
+            text-align: center;
+        }
+
+        .time {
+            justify-content: stretch;
+            font-size: 20px;
+            font-weight: bold;
+            color: #D0F252;
+            text-align: center;
+        }
+
+        .countlabel {
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight: bold;
+            color: #D0F252;
+            text-align: center;
+        }
+
+        .timer {
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight: bold;
+            color: #D0F252;
+            text-align: center;
+        }
+
+        .counter {
+            justify-content: space-between;
+            font-size: 20px;
+            font-weight: bold;
+            color: #D0F252;
+            text-align: center;
+        }
+
+        .how-to {
+            /*            position: absolute;*/
+            top: 75%;
+            color: white;
+        }
+
+        .explanation {
+            /*            position: absolute;*/
+            top: 80%;
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+    <script type="text/javascript">
+        var timerOn = false;
+        function timer() {
+            var sec = parseInt(document.getElementById('timer').innerHTML);
+            sec++;
+            document.getElementById('timer').innerHTML = String(sec);
+            setTimeout("timer()", 1000);
+
+        }
+        function play() {
+            var array = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", " "];
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                const temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+
+            document.getElementById('1').innerHTML = array[0];
+            document.getElementById('2').innerHTML = array[1];
+            document.getElementById('3').innerHTML = array[2];
+            document.getElementById('4').innerHTML = array[3];
+            document.getElementById('5').innerHTML = array[4];
+            document.getElementById('6').innerHTML = array[5];
+            document.getElementById('7').innerHTML = array[6];
+            document.getElementById('8').innerHTML = array[7];
+            document.getElementById('9').innerHTML = array[8];
+            document.getElementById('10').innerHTML = array[9];
+            document.getElementById('11').innerHTML = array[10];
+            document.getElementById('12').innerHTML = array[11];
+            document.getElementById('13').innerHTML = array[12];
+            document.getElementById('14').innerHTML = array[13];
+            document.getElementById('15').innerHTML = array[14];
+            document.getElementById('blank').innerHTML = array[15];
+
+            document.getElementById('timer').innerHTML = "0";
+            document.getElementById('counter').innerHTML = "0";
+
+            if (!timerOn) {
+                timer();
+                timerOn = true;
+            }
+
+
+        }
+        function won() {
+            var secs = document.getElementById('timer').innerHTML;
+            var moves = document.getElementById('counter').innerHTML;
+            if (document.getElementById('1').innerHTML == "1" && document.getElementById('2').innerHTML == "2" &&
+                document.getElementById('3').innerHTML == "3" && document.getElementById('4').innerHTML == "4" &&
+                document.getElementById('5').innerHTML == "5" && document.getElementById('6').innerHTML == "6" &&
+                document.getElementById('7').innerHTML == "7" && document.getElementById('8').innerHTML == "8" &&
+                document.getElementById('9').innerHTML == "9" && document.getElementById('10').innerHTML == "10" &&
+                document.getElementById('11').innerHTML == "11" && document.getElementById('12').innerHTML == "12" &&
+                document.getElementById('13').innerHTML == "13" && document.getElementById('14').innerHTML == "14" &&
+                document.getElementById('15').innerHTML == "15" && document.getElementById('blank').innerHTML == " ") {
+                alert("You Completed The Puzzle in " + secs + " seconds and in " + moves + " moves. " + " Congratulations!!");
+            }
+        }
+        function one() {
+            var number = document.getElementById('1').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('2').innerHTML == " ") {
+                document.getElementById('2').innerHTML = number;
+                document.getElementById('1').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+
+            }
+            else if (document.getElementById('5').innerHTML == " ") {
+                document.getElementById('5').innerHTML = number;
+                document.getElementById('1').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function two() {
+            var number = document.getElementById('2').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('1').innerHTML == " ") {
+                document.getElementById('1').innerHTML = number;
+                document.getElementById('2').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('3').innerHTML == " ") {
+                document.getElementById('3').innerHTML = number;
+                document.getElementById('2').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('6').innerHTML == " ") {
+                document.getElementById('6').innerHTML = number;
+                document.getElementById('2').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function three() {
+            var number = document.getElementById('3').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('2').innerHTML == " ") {
+                document.getElementById('2').innerHTML = number;
+                document.getElementById('3').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('4').innerHTML == " ") {
+                document.getElementById('4').innerHTML = number;
+                document.getElementById('3').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('7').innerHTML == " ") {
+                document.getElementById('7').innerHTML = number;
+                document.getElementById('3').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function four() {
+            var number = document.getElementById('4').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('3').innerHTML == " ") {
+                document.getElementById('3').innerHTML = number;
+                document.getElementById('4').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('8').innerHTML == " ") {
+                document.getElementById('8').innerHTML = number;
+                document.getElementById('4').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function five() {
+            var number = document.getElementById('5').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('1').innerHTML == " ") {
+                document.getElementById('1').innerHTML = number;
+                document.getElementById('5').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('6').innerHTML == " ") {
+                document.getElementById('6').innerHTML = number;
+                document.getElementById('5').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('9').innerHTML == " ") {
+                document.getElementById('9').innerHTML = number;
+                document.getElementById('5').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function six() {
+            var number = document.getElementById('6').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('2').innerHTML == " ") {
+                document.getElementById('2').innerHTML = number;
+                document.getElementById('6').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('5').innerHTML == " ") {
+                document.getElementById('5').innerHTML = number;
+                document.getElementById('6').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('7').innerHTML == " ") {
+                document.getElementById('7').innerHTML = number;
+                document.getElementById('6').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('10').innerHTML == " ") {
+                document.getElementById('10').innerHTML = number;
+                document.getElementById('6').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function seven() {
+            var number = document.getElementById('7').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('3').innerHTML == " ") {
+                document.getElementById('3').innerHTML = number;
+                document.getElementById('7').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('6').innerHTML == " ") {
+                document.getElementById('6').innerHTML = number;
+                document.getElementById('7').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('8').innerHTML == " ") {
+                document.getElementById('8').innerHTML = number;
+                document.getElementById('7').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('11').innerHTML == " ") {
+                document.getElementById('11').innerHTML = number;
+                document.getElementById('7').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function eight() {
+            var number = document.getElementById('8').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('4').innerHTML == " ") {
+                document.getElementById('4').innerHTML = number;
+                document.getElementById('8').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('7').innerHTML == " ") {
+                document.getElementById('7').innerHTML = number;
+                document.getElementById('8').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('12').innerHTML == " ") {
+                document.getElementById('12').innerHTML = number;
+                document.getElementById('8').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function nine() {
+            var number = document.getElementById('9').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('5').innerHTML == " ") {
+                document.getElementById('5').innerHTML = number;
+                document.getElementById('9').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('10').innerHTML == " ") {
+                document.getElementById('10').innerHTML = number;
+                document.getElementById('9').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('13').innerHTML == " ") {
+                document.getElementById('13').innerHTML = number;
+                document.getElementById('9').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function ten() {
+            var number = document.getElementById('10').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('6').innerHTML == " ") {
+                document.getElementById('6').innerHTML = number;
+                document.getElementById('10').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('9').innerHTML == " ") {
+                document.getElementById('9').innerHTML = number;
+                document.getElementById('10').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('11').innerHTML == " ") {
+                document.getElementById('11').innerHTML = number;
+                document.getElementById('10').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('14').innerHTML == " ") {
+                document.getElementById('14').innerHTML = number;
+                document.getElementById('10').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function eleven() {
+            var number = document.getElementById('11').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('7').innerHTML == " ") {
+                document.getElementById('7').innerHTML = number;
+                document.getElementById('11').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('10').innerHTML == " ") {
+                document.getElementById('10').innerHTML = number;
+                document.getElementById('11').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('12').innerHTML == " ") {
+                document.getElementById('12').innerHTML = number;
+                document.getElementById('11').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('15').innerHTML == " ") {
+                document.getElementById('15').innerHTML = number;
+                document.getElementById('11').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function twelve() {
+            var number = document.getElementById('12').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('8').innerHTML == " ") {
+                document.getElementById('8').innerHTML = number;
+                document.getElementById('12').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('11').innerHTML == " ") {
+                document.getElementById('11').innerHTML = number;
+                document.getElementById('12').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('blank').innerHTML == " ") {
+                document.getElementById('blank').innerHTML = number;
+                document.getElementById('12').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function thirteen() {
+            var number = document.getElementById('13').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('9').innerHTML == " ") {
+                document.getElementById('9').innerHTML = number;
+                document.getElementById('13').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('14').innerHTML == " ") {
+                document.getElementById('14').innerHTML = number;
+                document.getElementById('13').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function fourteen() {
+            var number = document.getElementById('14').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('10').innerHTML == " ") {
+                document.getElementById('10').innerHTML = number;
+                document.getElementById('14').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('13').innerHTML == " ") {
+                document.getElementById('13').innerHTML = number;
+                document.getElementById('14').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('15').innerHTML == " ") {
+                document.getElementById('15').innerHTML = number;
+                document.getElementById('14').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function fifteen() {
+            var number = document.getElementById('15').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('11').innerHTML == " ") {
+                document.getElementById('11').innerHTML = number;
+                document.getElementById('15').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('14').innerHTML == " ") {
+                document.getElementById('14').innerHTML = number;
+                document.getElementById('15').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('blank').innerHTML == " ") {
+                document.getElementById('blank').innerHTML = number;
+                document.getElementById('15').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+        function blank() {
+            var number = document.getElementById('blank').innerHTML;
+            var count = parseInt(document.getElementById('counter').innerHTML);
+            if (document.getElementById('12').innerHTML == " ") {
+                document.getElementById('12').innerHTML = number;
+                document.getElementById('blank').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else if (document.getElementById('15').innerHTML == " ") {
+                document.getElementById('15').innerHTML = number;
+                document.getElementById('blank').innerHTML = " ";
+                document.getElementById('counter').innerHTML = String(count + 1);
+                setTimeout("won()", 100);
+            }
+            else {
+                alert("Not a Valid Move!!");
+            }
+        }
+</script>
+</head>
+<body>
+    <h1 style="color: white;" id="heading">15-Puzzle</h1>
+    <div class="grid">
+        <button class="grid-item" id="1" onclick="one()">1</button>
+        <button class="grid-item" id="2" onclick="two()">2</button>
+        <button class="grid-item" id="3" onclick="three()">3</button>
+        <button class="grid-item" id="4" onclick="four()">4</button>
+        <button class="grid-item" id="5" onclick="five()">5</button>
+        <button class="grid-item" id="6" onclick="six()">6</button>
+        <button class="grid-item" id="7" onclick="seven()">7</button>
+        <button class="grid-item" id="8" onclick="eight()">8</button>
+        <button class="grid-item" id="9" onclick="nine()">9</button>
+        <button class="grid-item" id="10" onclick="ten()">10</button>
+        <button class="grid-item" id="11" onclick="eleven()">11</button>
+        <button class="grid-item" id="12" onclick="twelve()">12</button>
+        <button class="grid-item" id="13" onclick="thirteen()">13</button>
+        <button class="grid-item" id="14" onclick="fourteen()">14</button>
+        <button class="grid-item" id="15" onclick="fifteen()">15</button>
+        <button class="grid-item" id="blank" onclick="blank()"></button>
+    </div>
+    <br />
+    <div class="button">
+        <button id="play" class="play" onclick="play()">Play</button>
+    </div>
+    <div class="labels">
+        <span id="time" class="time">Time: </span>
+        <span id="timer" class="timer">0</span>
+        <span id="countlabel" class="countlabel">Moves: </span>
+        <span id="counter" class="counter">0</span>
+    </div>
+    <br />
+
+    <h2 class="how-to" id="how-to">How To Play:</h2>
+    <p class="explanation" id="explanation">The aim of the game is to rearrange the tiles back into order by sliding them. Click on a tile next to an empty spot to slide it.</p>
+
+</body>
+</html>
