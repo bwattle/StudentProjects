@@ -1,0 +1,61 @@
+body{
+	background-color: rgb(5, 10, 50);
+	font-family: "Lucida Console", "Courier New", monospace;
+}
+h1{
+	color: rgb(230, 230, 255);
+}
+#gridContainer{
+	height: 600px;
+	width: 600px;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: auto;
+	background: lightcoral;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	background-color: rgb(5, 10, 50);
+	padding: 10px;
+	border-radius: 5px;
+}
+.gridBox{
+	display: flex;
+	justify-content: center;
+	width: 90px;
+	height: 90px;
+	background-color: rgb(20, 50, 150);
+	color: rgb(255, 255, 255);
+	border-radius: 10px;
+	font-size: 30px;
+}
+.gridBox:hover{
+	background-color: rgb(75, 100, 200);
+}
+.gridBoxText{
+	/*vertical-align: middle;*/
+	position: relative;
+	top: 30%;
+}
+.noselect {
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Old versions of Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+#solveButton{
+	background-color: rgb(20, 50, 150);
+	color: rgb(255, 255, 255);
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-radius: 10px;
+}
+#solveButton:hover{
+	background-color: rgb(75, 100, 200);
+}
+.gridBoxSelected{
+    background-color: rgb(25, 50, 100);
+}
