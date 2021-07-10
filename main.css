@@ -41,7 +41,7 @@ th, td {
     color: red;
 }
 
-.h1-18ptBold {
+    .h1-18ptBold {
     text-align: center;
     font-size: 18pt;
 /*    font-family: Calibri, sans-serif;*/
@@ -60,6 +60,10 @@ th, td {
 
 .body-calibri {
     font-family: Calibri;
+}
+
+.body-center {
+    text-align: center;
 }
 
 .body-purple {
